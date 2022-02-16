@@ -11,17 +11,33 @@ namespace EliteDangerousRankGrindLib
     {
         public UInt64 id { get; set; }
         public UInt64 edsm_id { get; set; }
+        // Name of System
         public String name { get; set; }
+        
+        // Location of System in Galaxy
         public double x { get; set; }
         public double y { get; set; }
         public double z { get; set; }
+        
+        // Population of System
         public UInt64 population { get; set; }
+
+        // Government of System
         public UInt16 government_id { get; set; }
         public String government { get; set; }
+
+        // Superpower allegiance of System
+        // Federation/Empire/Alliance/Independent
         public UInt16 allegiance_id { get; set; }
         public String allegiance { get; set; }
+
+        // Security state of System
+        // Affects mission types
         public UInt16 security_id { get; set; }
         public String security { get; set; }
+        
+        // Economy type of System
+        // Affects mission types
         public UInt16 primary_economy_id { get; set; }
         public String primary_economy { get; set; }
         public UInt64 updated_at { get; set; }
@@ -46,7 +62,7 @@ namespace EliteDangerousRankGrindLib
         /// Filters a given Json File.
         /// Removes systems which require a permit and has three or less minor factions, these systems are not useful for calcuations
         /// Removes data which is unnecessary for calcuations
-        /// Alliance and Indepentant systems are not removed as the factions in the system are counted, this data is in the factions Json file
+        /// Alliance and Indepentent systems are not removed as the factions in the system are counted, this data is in the factions Json file
         /// </summary>
         /// <param name="systemFilePath"></param>
         /// <param name="serializer"></param>
