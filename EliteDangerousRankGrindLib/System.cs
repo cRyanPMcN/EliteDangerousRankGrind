@@ -24,8 +24,8 @@ namespace EliteDangerousRankGrindLib
         public String security { get; set; }
         public UInt16 primary_economy_id { get; set; }
         public String primary_economy { get; set; }
-        public DateTime updated_at { get; set; }
-        public DateTime minor_factions_updated_at { get; set; }
+        public UInt64 updated_at { get; set; }
+        public UInt64 minor_factions_updated_at { get; set; }
         public IList<MinorFactions> minor_faction_presences { get; set; }
 
 
