@@ -51,10 +51,11 @@ namespace EliteDangerousRankGrindLib
         /// <param name="systemFilePath"></param>
         static void Filter_Json_File(String systemFilePath)
         {
-            JsonSerializer serializer = new JsonSerializer();
-            //writer.Write(JsonConvert.SerializeObject(systems));
-            serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
-            serializer.NullValueHandling = NullValueHandling.Include;
+            JsonSerializer serializer = new JsonSerializer()
+            {
+                Formatting = Formatting.Indented,
+                NullValueHandling = NullValueHandling.Include
+            };
             Filter_Json_File(systemFilePath, serializer);
         }
 
